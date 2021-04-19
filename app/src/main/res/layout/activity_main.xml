@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#272626"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewTop"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="4dp"
+        android:background="#121111"
+        android:fadingEdge="vertical"
+        android:src="@drawable/dice"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="94dp"
+        android:layout_height="350dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTop">
+
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="349dp"
+            android:orientation="vertical">
+
+
+            <RadioButton
+                android:id="@+id/radioButton4"
+                style="@style/MyRadioStyle"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:text="4"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="439dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton6"
+                style="@style/MyRadioStyle"
+                android:text="6"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="316dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton8"
+                style="@style/MyRadioStyle"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:text="8"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="439dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton10"
+                style="@style/MyRadioStyle"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:text="10"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="439dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton10s"
+                style="@style/MyRadioStyle"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:text="10s"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="439dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton12"
+                style="@style/MyRadioStyle"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:text="12"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="439dp" />
+
+            <RadioButton
+                android:id="@+id/radioButton20"
+                style="@style/MyRadioStyle"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:text="20"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:layout_editor_absoluteY="439dp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButtonRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.655"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFirst"
+        app:srcCompat="@drawable/rollbtn" />
+
+    <EditText
+        android:id="@+id/editTextSides"
+        android:layout_width="98dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="numberSigned"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonRoll"
+        style="@style/MyEditText"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="215dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginLeft="96dp"
+        android:layout_marginTop="24dp"
+        android:text="Enter custom sides"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButtonRoll" />
+
+    <TextView
+        android:id="@+id/textViewFirst"
+        android:layout_width="130dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="?"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTop" />
+
+    <TextView
+        android:id="@+id/textViewSecond"
+        android:layout_width="130dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="?"
+        android:textColor="#FFFFFF"
+        android:textSize="70sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/textViewFirst"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewTop" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="163dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="8dp"
+        android:text="Roll Two Dice"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
